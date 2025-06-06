@@ -1,0 +1,52 @@
+# Basic comprehensive scan
+python garak_scanner_toolkit.py --model-type openai --model-name gpt-3.5-turbo --category comprehensive
+
+# Targeted security testing
+python garak_scanner_toolkit.py --model-type huggingface --model-name gpt2 --category jailbreaks toxicity malware
+
+#more sepcific scan
+python3 -m garak --model_type huggingface --model_name gpt2 --probes dan.Dan_11_0,dan.DAN_Jailbreak,goodside --generations 2
+
+#to see report of runs 
+python3 garak_scanner_toolkit.py --analyze ./runs
+
+python3 garak_scanner_toolkit.py --model-type huggingface --model-name gpt2 --category jailbreaks --max-generations 3 --timeout 600)
+#aifoce details
+--model-type NVAIE-NIM and --model-name nvidia/llama-3.1-nemotron-70b-instruct 
+
+
+#aifroce scanning# Set your API key
+export NIM_API_KEY="nvapi-xXxXxXx"
+
+# Scan a specific NIM model
+python -m garak --model_type nim --model_name meta/llama-3.1-8b-instruct --probes encoding
+
+# Set your API key
+export NIM_API_KEY="nvapi-xXxXxXx"
+
+# Scan a specific airforce model
+python -m garak --model_type NVAIE-NIM --model_name nvidia/llama-3.1-nemotron-70b-instruct --probes encoding
+
+# Configuration-based scanning
+python garak_scanner_toolkit.py --config security_config.yaml
+
+# Analysis of existing results
+python ggarak_scanner_toolkit.py --analyze ./results
+
+# Generate sample configuration
+python ggarak_scanner_toolkit.py --generate-config
+
+
+#Env setup
+# Create a virtual environment (recommended)
+python -m venv garak_env
+source garak_env/bin/activate  # On Windows: garak_env\Scripts\activate
+
+# Ensure you have Python 3.10 or higher
+python --version
+
+# Install all requirements
+pip install -r garak_requirements.txt
+
+# Verify garak installation
+python -m garak --help

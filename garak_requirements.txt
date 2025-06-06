@@ -1,0 +1,203 @@
+# Requirements for Comprehensive Garak LLM Security Scanner Toolkit
+# ================================================================
+#
+# This file contains all dependencies required for the Garak LLM Security Scanner Toolkit
+# Install with: pip install -r requirements.txt
+#
+# For development setup:
+# pip install -r requirements.txt -r requirements-dev.txt
+
+# Core Dependencies
+# -----------------
+
+# Garak LLM vulnerability scanner - main dependency
+garak>=0.9.0
+
+# Python standard library enhancements
+pyyaml>=6.0              # YAML configuration file support
+#dataclasses>=0.8         # Data structure definitions (Python 3.7+ backport)
+pathlib>=1.0.1           # Path manipulation utilities
+typing-extensions>=4.0.0 # Enhanced typing support
+
+# Data Processing & Analysis
+# --------------------------
+pandas>=1.5.0            # Data analysis and manipulation
+numpy>=1.21.0            # Numerical computing support
+scipy>=1.9.0             # Scientific computing utilities
+
+# HTTP & API Libraries
+# --------------------
+requests>=2.28.0         # HTTP library for API calls
+urllib3>=1.26.0          # HTTP client library
+certifi>=2022.9.24       # SSL certificate verification
+
+# Machine Learning & AI Libraries
+# --------------------------------
+torch>=1.12.0            # PyTorch for ML models (required by some Garak probes)
+transformers>=4.21.0     # Hugging Face transformers library
+tokenizers>=0.13.0       # Fast tokenizers for text processing
+datasets>=2.5.0          # Dataset loading and processing
+accelerate>=0.12.0       # Hardware acceleration for transformers
+
+# API Client Libraries
+# --------------------
+openai>=1.0.0            # OpenAI API client
+anthropic>=0.7.0         # Anthropic API client
+cohere>=4.0.0            # Cohere API client
+google-cloud-aiplatform>=1.25.0  # Google Cloud AI Platform
+
+# Optional Model Providers
+# ------------------------
+replicate>=0.15.0        # Replicate API client
+together>=0.2.0          # Together AI client
+
+# Security & Validation
+# ---------------------
+cryptography>=3.4.8     # Cryptographic utilities
+validators>=0.20.0       # Data validation utilities
+python-dateutil>=2.8.2  # Date parsing utilities
+
+# Logging & Monitoring
+# --------------------
+colorlog>=6.7.0          # Colored logging output
+tqdm>=4.64.0             # Progress bars
+rich>=12.5.0             # Rich text and beautiful formatting
+
+# File Format Support
+# -------------------
+jsonlines>=3.1.0         # JSONL file processing
+openpyxl>=3.0.10         # Excel file support
+xlrd>=2.0.1              # Legacy Excel file support
+python-docx>=0.8.11      # Word document processing
+pypdf>=3.0.0             # PDF processing
+
+# Web & HTML Processing
+# ---------------------
+beautifulsoup4>=4.11.0   # HTML/XML parsing
+lxml>=4.9.0              # XML/HTML processing
+html5lib>=1.1            # HTML5 parser
+markdown>=3.4.0          # Markdown processing
+
+# Development & Testing Support
+# -----------------------------
+pytest>=7.1.0           # Testing framework
+pytest-cov>=3.0.0       # Coverage testing
+pytest-asyncio>=0.19.0  # Async testing support
+black>=22.6.0            # Code formatting
+flake8>=5.0.0            # Code linting
+mypy>=0.971              # Static type checking
+isort>=5.10.0            # Import sorting
+
+# Performance & Optimization
+# ---------------------------
+psutil>=5.9.0            # System and process utilities
+memory-profiler>=0.60.0  # Memory usage profiling
+cachetools>=5.2.0        # Caching utilities
+
+# Configuration & Environment
+# ----------------------------
+python-dotenv>=0.20.0    # Environment variable loading
+configparser>=5.3.0      # Configuration file parsing
+click>=8.1.0             # Command line interface utilities
+
+# Network & Communication
+# ------------------------
+websockets>=10.3         # WebSocket support for real-time communication
+aiohttp>=3.8.0           # Async HTTP client/server
+
+# Data Visualization (Optional)
+# ------------------------------
+matplotlib>=3.5.0        # Plotting library
+seaborn>=0.11.0          # Statistical data visualization
+plotly>=5.10.0           # Interactive plotting
+
+# Jupyter Support (Optional)
+# ---------------------------
+#jupyter>=1.0.0           # Jupyter notebook support
+#ipywidgets>=8.0.0        # Interactive widgets
+#notebook>=6.4.0          # Jupyter notebook server
+
+# Cloud Storage Support (Optional)
+# ---------------------------------
+#boto3>=1.24.0            # AWS SDK
+#google-cloud-storage>=2.5.0  # Google Cloud Storage
+#azure-storage-blob>=12.12.0  # Azure Blob Storage
+
+# Database Support (Optional)
+# ----------------------------
+#sqlalchemy>=1.4.0       # SQL toolkit and ORM
+#sqlite3                 # SQLite database (built-in)
+#psycopg2-binary>=2.9.0  # PostgreSQL adapter
+
+# Specialized AI/ML Libraries
+# ----------------------------
+sentence-transformers>=2.2.0  # Sentence embeddings
+langchain>=0.0.200       # LLM application framework
+langsmith>=0.0.40        # LangChain monitoring
+
+# Text Processing & NLP
+# ----------------------
+nltk>=3.7                # Natural language toolkit
+spacy>=3.4.0             # Advanced NLP library
+textstat>=0.7.0          # Text statistics
+python-Levenshtein>=0.20.0  # String similarity metrics
+
+# Security Scanning Specific
+# ---------------------------
+safety>=2.3.0            # Dependency vulnerability scanning
+bandit>=1.7.0            # Python security linter
+semgrep>=1.0.0           # Static analysis security scanner
+
+# API Rate Limiting & Retry
+# --------------------------
+ratelimit>=2.2.0         # Rate limiting utilities
+tenacity>=8.1.0          # Retry library
+backoff>=2.2.0           # Backoff strategies
+
+# Miscellaneous Utilities
+# ------------------------
+regex>=2022.7.0          # Advanced regular expressions
+fuzzywuzzy>=0.18.0       # Fuzzy string matching
+python-magic>=0.4.0     # File type detection
+chardet>=5.0.0           # Character encoding detection
+
+# Platform-specific dependencies
+# -------------------------------
+# Windows specific
+#pywin32>=304; sys_platform == "win32"
+#wmi>=1.5.1; sys_platform == "win32"
+
+# macOS specific  
+#pyobjc>=8.5; sys_platform == "darwin"
+
+# Linux specific
+#python-systemd>=234; sys_platform == "linux"
+
+# Version constraints and compatibility
+# ------------------------------------
+# Pin critical versions to avoid conflicts
+#setuptools>=65.0.0
+#wheel>=0.37.0
+#pip>=22.0.0
+
+# Optional extras for specific use cases
+# --------------------------------------
+# Install with: pip install -r requirements.txt[dev]
+# [dev]
+# pre-commit>=2.20.0
+# pytest-xdist>=2.5.0
+# coverage>=6.4.0
+
+# [docs]
+# sphinx>=5.1.0
+# sphinx-rtd-theme>=1.0.0
+# myst-parser>=0.18.0
+
+# [gpu]
+# torch>=1.12.0+cu116
+# tensorflow-gpu>=2.9.0
+
+# [monitoring]
+# wandb>=0.13.0
+# mlflow>=1.28.0
+# tensorboard>=2.9.0
