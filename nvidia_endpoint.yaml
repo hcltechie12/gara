@@ -1,0 +1,13 @@
+generators:
+  rest:
+    RestGenerator:
+      name: nvidia_endpoint
+      uri: "YOUR_ENDPOINT_URL_HERE"
+      method: "POST"
+      headers:
+        Authorization: "Bearer YOUR_API_KEY"
+        Content-Type: "application/json"
+      data:
+        max_tokens: 150
+        temperature: 0.1
+      response_json_field: "choices.0.message.content"
